@@ -1,2 +1,6 @@
 R_DEF: Internal format may change without notice
 local
+drawable about
+drawable profile
+drawable round_home_24
+drawable settings

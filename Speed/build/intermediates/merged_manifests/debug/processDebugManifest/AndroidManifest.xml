@@ -8,6 +8,9 @@
         android:minSdkVersion="24"
         android:targetSdkVersion="35" />
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <permission
         android:name="com.apps.speed.android.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
@@ -20,6 +23,7 @@
         android:debuggable="true"
         android:extractNativeLibs="false"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.apps.speed.android.MainActivity"
@@ -30,6 +34,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
         <activity
             android:name="androidx.compose.ui.tooling.PreviewActivity"
             android:exported="true" />

@@ -1,1 +1,5 @@
 com.apps.speed
+drawable about
+drawable profile
+drawable round_home_24
+drawable settings

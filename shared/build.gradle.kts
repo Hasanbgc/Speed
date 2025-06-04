@@ -34,6 +34,9 @@ kotlin {
                 implementation(libs.compose.runtime)
                 implementation(libs.compose.foundation)
                 implementation(libs.compose.material3)
+                implementation(libs.voyager.core)
+                implementation(libs.voyager.navigator)
+                implementation(libs.moko.mvvm)
             }
         }
         val commonTest by getting {
@@ -43,7 +46,9 @@ kotlin {
         }
         val androidMain by getting {
             dependencies {
+                //implementation(libs.voyager.androidx)
                 implementation("androidx.activity:activity-compose:1.8.0") // for Compose integration
+                implementation(libs.play.services.location)
             }
         }
         val iosX64Main by getting

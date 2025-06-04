@@ -1,7 +1,7 @@
 package com.apps.speed
 
-interface Platform {
-    val name: String
+expect class PermissionHandler{
+   suspend fun getLocationPermission() : Boolean
 }
 
-expect fun getPlatform(): Platform
+expect fun createPermissionHandler(): PermissionHandler

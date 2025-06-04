@@ -1,0 +1,4 @@
+int drawable about 0x0
+int drawable profile 0x0
+int drawable round_home_24 0x0
+int drawable settings 0x0

@@ -1,9 +1,21 @@
 package com.apps.speed
 
-import platform.UIKit.UIDevice
+/*
+actual class PermissionHandler {
+   */
+/* actual fun getLocationPermission(onPermissionResult: (Boolean) -> Unit) {
 
-class IOSPlatform: Platform {
-    override val name: String = UIDevice.currentDevice.systemName() + " " + UIDevice.currentDevice.systemVersion
+    }*//*
+
 }
 
-actual fun getPlatform(): Platform = IOSPlatform()
+actual class LocationProvider(){
+    actual fun startLocationUpdates(onSpeedChange: (Double) -> Unit) {
+
+    }
+    actual fun stopLocationUpdates() {
+
+    }
+
+
+}*/

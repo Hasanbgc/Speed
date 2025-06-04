@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.apps.speed.android.Speed-mergeDebugResources-43:/values-v21/values-v21.xml",
+            "outputFile": "com.apps.speed.android.Speed-mergeDebugResources-48:/values-v21/values-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\HP\\.gradle\\caches\\8.11.1\\transforms\\4636ee3826eca85edafbcf01f65f48a3\\transformed\\core-1.13.1\\res\\values-v21\\values-v21.xml",
+                    "source": "C:\\Users\\Hasan\\.gradle\\caches\\8.11.1\\transforms\\81c0997c33e16732920baf68fa8ed6a8\\transformed\\core-1.13.1\\res\\values-v21\\values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
