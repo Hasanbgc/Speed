@@ -1,0 +1,21 @@
+ # Android build folder
+    /build/
+
+    # You might also want to ignore other build-related folders or files
+    # For example, if you have build folders inside specific modules:
+    # /app/build/
+    # /mylibrary/build/
+
+    # Other common Android ignores (many are in default Android .gitignore)
+    *.apk
+    *.aab
+    *.ap_
+    *.a_
+    *.aar
+    *.dex
+    *.class
+    *.iml
+    .gradle/
+    local.properties
+    captures/
+    .DS_Store
