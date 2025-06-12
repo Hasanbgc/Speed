@@ -8,18 +8,20 @@ import kotlinx.coroutines.flow.flatMapLatest
 
 class SpeedViewModel : ViewModel()  {
 
-    private val _currentSpeed = MutableStateFlow<SpeedState>(SpeedState(currentSpeed = 0))
+    private val _currentSpeed = MutableStateFlow<SpeedState>(SpeedState(currentSpeed = 0f))
     val currentSpeed: StateFlow<SpeedState> = _currentSpeed
 
     private val _locationPermission = MutableStateFlow<Boolean?>(null)
     val locationPermission: StateFlow<Boolean?> = _locationPermission
 
-    fun updateSpeed(newSpeed: Int) {
+    fun updateSpeed(newSpeed: Float) {
+
         _currentSpeed.value = _currentSpeed.value.copy(currentSpeed = newSpeed)
+        println("updated_speed ${_currentSpeed.value}")
     }
 
     fun resetSpeed() {
-        _currentSpeed.value = SpeedState(currentSpeed = 0)
+        _currentSpeed.value = SpeedState(currentSpeed = 0f)
     }
 
     fun updateLocationPermission(granted: Boolean) {
@@ -41,5 +43,5 @@ class SpeedViewModel : ViewModel()  {
 }
 
 data class SpeedState(
-        val currentSpeed: Int,
+        val currentSpeed: Float,
 )

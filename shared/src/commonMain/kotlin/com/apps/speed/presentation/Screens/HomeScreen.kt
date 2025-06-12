@@ -2,19 +2,25 @@ package com.apps.speed.presentation.Screens
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import cafe.adriel.voyager.core.screen.Screen
 import com.apps.speed.domain.LiveSpeedProvider
 import com.apps.speed.presentation.viewmodel.SpeedViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import kotlin.math.roundToInt
 
 
 class HomeScreen(
@@ -24,30 +30,33 @@ class HomeScreen(
 
     @Composable
     override fun Content(){
-        val viewModel = SpeedViewModel()
-        var permissionGranted = remember { false }
-        val speedState = viewModel.currentSpeed.collectAsState().value
+        val viewModel = remember { SpeedViewModel()}
+        var permissionGranted by remember { mutableStateOf<Boolean?>(null) }
+        val speedState = viewModel.currentSpeed.collectAsStateWithLifecycle()
         val coroutineScope = rememberCoroutineScope()
 
         LaunchedEffect(Unit) {
-            permissionGranted = onRequestPermission()
-            //viewModel.updateLocationPermission(granted)
+            val granted = onRequestPermission()
+            permissionGranted = granted
 
-            if(permissionGranted) speedProvider.startSpeedUpdates { speed ->
-                viewModel.updateSpeed(speed)
+            if(granted) {
+                speedProvider.startSpeedUpdates { speed ->
+                    viewModel.updateSpeed(speed)
+                }
             }
         }
 
         Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center){
-            println("Speed: ${speedState.currentSpeed} km/h")
-            println("Permission Granted: $permissionGranted")
-            if (permissionGranted == true) {
-                Text(text = "Speed: ${speedState.currentSpeed} km/h")
-            } else if (permissionGranted == false) {
-                Text(text = "Location permission required to show speed.")
-            } else {
-                Text(text = "Requesting permission...")
+
+            when (permissionGranted) {
+                true -> Text(text = "Speed: ${speedState.value.currentSpeed.toFormattedSpeed()} km/h")
+                false -> Text("Permission required")
+                null -> {}//CircularProgressIndicator()
             }
         }
+    }
+
+    fun Float.toFormattedSpeed(): String {
+        return ((this * 1000).roundToInt() / 1000.0).toString()
     }
 }

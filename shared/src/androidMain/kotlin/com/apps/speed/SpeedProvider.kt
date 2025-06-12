@@ -10,6 +10,10 @@ import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.location.LocationResult
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.location.Priority
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class SpeedProvider(context: Context): LiveSpeedProvider {
 
@@ -17,11 +21,12 @@ class SpeedProvider(context: Context): LiveSpeedProvider {
     private var locationCallback: LocationCallback? = null
 
     @RequiresPermission(allOf = [Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION])
-    override fun startSpeedUpdates(onSpeedChanged: (Int) -> Unit) {
+    override fun startSpeedUpdates(onSpeedChanged: (Float) -> Unit) {
         locationCallback = object : LocationCallback() {
             override fun onLocationResult(locationResult: LocationResult) {
                 locationResult.lastLocation?.let {
-                    onSpeedChanged(it.speed.toInt())
+                    println("location_chaged ${it.speed}")
+                    onSpeedChanged(it.speed)
                 }
             }
         }
@@ -34,3 +39,14 @@ class SpeedProvider(context: Context): LiveSpeedProvider {
         locationCallback?.let { fusedLocationClient.removeLocationUpdates(it) }
     }
 }
+/*
+fun mockSpeed(){
+    // Simulate accelerating from 0 to 100 km/h
+    var speed = 0f
+    CoroutineScope(Dispatchers.Default).launch {
+        while (speed < 100) {
+            delay(1000) // Update every second
+            speed += 5f
+            callback(speed)
+        }
+}*/
