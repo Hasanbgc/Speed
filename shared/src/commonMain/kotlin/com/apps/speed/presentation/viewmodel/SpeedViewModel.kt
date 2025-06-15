@@ -1,12 +1,13 @@
 package com.apps.speed.presentation.viewmodel
 
+import com.apps.speed.domain.LiveSpeedProvider
 import dev.icerock.moko.mvvm.viewmodel.ViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.flatMapLatest
 
 
-class SpeedViewModel : ViewModel()  {
+class SpeedViewModel(private val speedProvider: LiveSpeedProvider) : ViewModel()  {
 
     private val _currentSpeed = MutableStateFlow<SpeedState>(SpeedState(currentSpeed = 0f))
     val currentSpeed: StateFlow<SpeedState> = _currentSpeed
@@ -14,10 +15,11 @@ class SpeedViewModel : ViewModel()  {
     private val _locationPermission = MutableStateFlow<Boolean?>(null)
     val locationPermission: StateFlow<Boolean?> = _locationPermission
 
-    fun updateSpeed(newSpeed: Float) {
-
-        _currentSpeed.value = _currentSpeed.value.copy(currentSpeed = newSpeed)
-        println("updated_speed ${_currentSpeed.value}")
+    fun updateSpeed() {
+        speedProvider.startSpeedUpdates { liveSpeed ->
+            _currentSpeed.value = _currentSpeed.value.copy(currentSpeed = liveSpeed)
+            println("updated_speed ${_currentSpeed.value}")
+        }
     }
 
     fun resetSpeed() {

@@ -30,19 +30,16 @@ class HomeScreen(
 
     @Composable
     override fun Content(){
-        val viewModel = remember { SpeedViewModel()}
+        val viewModel = remember { SpeedViewModel(speedProvider)}
         var permissionGranted by remember { mutableStateOf<Boolean?>(null) }
         val speedState = viewModel.currentSpeed.collectAsStateWithLifecycle()
         val coroutineScope = rememberCoroutineScope()
 
         LaunchedEffect(Unit) {
-            val granted = onRequestPermission()
-            permissionGranted = granted
+            permissionGranted = onRequestPermission()
 
-            if(granted) {
-                speedProvider.startSpeedUpdates { speed ->
-                    viewModel.updateSpeed(speed)
-                }
+            if(permissionGranted == true) {
+                viewModel.updateSpeed()
             }
         }
 
