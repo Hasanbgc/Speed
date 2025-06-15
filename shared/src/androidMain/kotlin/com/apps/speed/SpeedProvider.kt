@@ -25,8 +25,8 @@ class SpeedProvider(context: Context): LiveSpeedProvider {
         locationCallback = object : LocationCallback() {
             override fun onLocationResult(locationResult: LocationResult) {
                 locationResult.lastLocation?.let {
-                    println("location_chaged ${it.speed}")
-                    onSpeedChanged(it.speed)
+                    val speed = it.speed * 3.6f // converting m/s to km/h
+                    onSpeedChanged(speed)
                 }
             }
         }
