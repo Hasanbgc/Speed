@@ -9,7 +9,7 @@ object Colors {
     val NeonPink = Color(0xFFFF00FF)
     val NeonGreen = Color(0xFF39FF14)
 
-    val Background = Color(0xFF0A0A0A)
+    val Background = Color(0xff0b101c)
     val AccentYellow = Color(0xFFFFFF33)
     val GlowWhite = Color(0xFFE0E0E0)
 

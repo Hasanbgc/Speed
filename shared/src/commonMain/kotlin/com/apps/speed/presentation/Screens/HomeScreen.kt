@@ -14,7 +14,6 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import cafe.adriel.voyager.core.screen.Screen
 import com.apps.speed.domain.LiveSpeedProvider
 import com.apps.speed.presentation.viewmodel.SpeedViewModel
@@ -26,24 +25,24 @@ import kotlin.math.roundToInt
 class HomeScreen(
     private val onRequestPermission: suspend () -> Boolean,
     private val speedProvider: LiveSpeedProvider
-    ) : Screen{
+    ) : Screen {
 
     @Composable
-    override fun Content(){
-        val viewModel = remember { SpeedViewModel(speedProvider)}
+    override fun Content() {
+        val viewModel = remember { SpeedViewModel(speedProvider) }
         var permissionGranted by remember { mutableStateOf<Boolean?>(null) }
-        val speedState = viewModel.currentSpeed.collectAsStateWithLifecycle()
+        val speedState = viewModel.currentSpeed.collectAsState()
         val coroutineScope = rememberCoroutineScope()
 
         LaunchedEffect(Unit) {
             permissionGranted = onRequestPermission()
 
-            if(permissionGranted == true) {
+            if (permissionGranted == true) {
                 viewModel.updateSpeed()
             }
         }
 
-        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center){
+        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
 
             when (permissionGranted) {
                 true -> Text(text = "Speed: ${speedState.value.currentSpeed.toFormattedSpeed()} km/h")
@@ -56,4 +55,5 @@ class HomeScreen(
     fun Float.toFormattedSpeed(): String {
         return ((this * 1000).roundToInt() / 1000.0).toString()
     }
+
 }

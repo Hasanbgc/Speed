@@ -1,15 +1,15 @@
-#Tue Jun 10 20:23:32 BDT 2025
-base.0=E\:\\Android\\Speed\\Speed\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.1=E\:\\Android\\Speed\\Speed\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\12\\classes.dex
-base.10=E\:\\Android\\Speed\\Speed\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
-base.2=E\:\\Android\\Speed\\Speed\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\13\\classes.dex
-base.3=E\:\\Android\\Speed\\Speed\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\1\\classes.dex
-base.4=E\:\\Android\\Speed\\Speed\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\3\\classes.dex
-base.5=E\:\\Android\\Speed\\Speed\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\5\\classes.dex
-base.6=E\:\\Android\\Speed\\Speed\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\6\\classes.dex
-base.7=E\:\\Android\\Speed\\Speed\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\8\\classes.dex
-base.8=E\:\\Android\\Speed\\Speed\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.9=E\:\\Android\\Speed\\Speed\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\6\\classes.dex
+#Thu Jun 19 17:11:37 BDT 2025
+base.0=C\:\\Users\\Hasan\\AndroidStudioProjects\\Speed\\Speed\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=C\:\\Users\\Hasan\\AndroidStudioProjects\\Speed\\Speed\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\12\\classes.dex
+base.10=C\:\\Users\\Hasan\\AndroidStudioProjects\\Speed\\Speed\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+base.2=C\:\\Users\\Hasan\\AndroidStudioProjects\\Speed\\Speed\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\13\\classes.dex
+base.3=C\:\\Users\\Hasan\\AndroidStudioProjects\\Speed\\Speed\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\1\\classes.dex
+base.4=C\:\\Users\\Hasan\\AndroidStudioProjects\\Speed\\Speed\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\3\\classes.dex
+base.5=C\:\\Users\\Hasan\\AndroidStudioProjects\\Speed\\Speed\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\5\\classes.dex
+base.6=C\:\\Users\\Hasan\\AndroidStudioProjects\\Speed\\Speed\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\6\\classes.dex
+base.7=C\:\\Users\\Hasan\\AndroidStudioProjects\\Speed\\Speed\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\8\\classes.dex
+base.8=C\:\\Users\\Hasan\\AndroidStudioProjects\\Speed\\Speed\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.9=C\:\\Users\\Hasan\\AndroidStudioProjects\\Speed\\Speed\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\6\\classes.dex
 path.0=classes.dex
 path.1=12/classes.dex
 path.10=classes2.dex

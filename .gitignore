@@ -7,7 +7,7 @@
     # /mylibrary/build/
 
     # Other common Android ignores (many are in default Android .gitignore)
-    *.apk
+    *. apk
     *.aab
     *.ap_
     *.a_

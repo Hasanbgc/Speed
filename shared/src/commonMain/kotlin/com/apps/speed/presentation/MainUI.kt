@@ -85,7 +85,7 @@ fun MainUI(getPermission: suspend () -> Boolean = { false },SpeedProvider: LiveS
                                 val screen = if (item.title == "Home") homeScreen else item.screen
                                 navigator.push(screen)
                                 title = item.title
-                                scope.launch {
+                                scope.launch {  //Scope is a rememberCoroutineScope, which is use to launch a short lived coroutine that perform some small UI related task
                                     drawerState.close()
                                 }
                             }
