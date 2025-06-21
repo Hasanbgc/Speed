@@ -1,16 +1,16 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Hasan\AndroidStudioProjects\Speed\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest6161057282860271565.xml:2:13-83
-INJECTED from C:\Users\Hasan\AndroidStudioProjects\Speed\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest6161057282860271565.xml:2:13-83
+ADDED from E:\Android\Speed\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest1536545474749299486.xml:2:13-83
+INJECTED from E:\Android\Speed\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest1536545474749299486.xml:2:13-83
 	package
-		INJECTED from C:\Users\Hasan\AndroidStudioProjects\Speed\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest6161057282860271565.xml
+		INJECTED from E:\Android\Speed\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest1536545474749299486.xml
 	xmlns:android
-		ADDED from C:\Users\Hasan\AndroidStudioProjects\Speed\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest6161057282860271565.xml:2:23-81
+		ADDED from E:\Android\Speed\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest1536545474749299486.xml:2:23-81
 uses-sdk
-INJECTED from C:\Users\Hasan\AndroidStudioProjects\Speed\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest6161057282860271565.xml reason: use-sdk injection requested
-INJECTED from C:\Users\Hasan\AndroidStudioProjects\Speed\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest6161057282860271565.xml
-INJECTED from C:\Users\Hasan\AndroidStudioProjects\Speed\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest6161057282860271565.xml
+INJECTED from E:\Android\Speed\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest1536545474749299486.xml reason: use-sdk injection requested
+INJECTED from E:\Android\Speed\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest1536545474749299486.xml
+INJECTED from E:\Android\Speed\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest1536545474749299486.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\Hasan\AndroidStudioProjects\Speed\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest6161057282860271565.xml
+		INJECTED from E:\Android\Speed\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest1536545474749299486.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\Hasan\AndroidStudioProjects\Speed\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest6161057282860271565.xml
+		INJECTED from E:\Android\Speed\shared\build\intermediates\tmp\ProcessLibraryManifest\debug\tempAndroidManifest1536545474749299486.xml
